@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Menu</title>
+
+    <!--Icons-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!--Font-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!--My Styles-->
+    <link rel="stylesheet" href="css/custom.css" type="text/css">
+
+</head>
+<body>
+
+<!--Main Nav-->
+<nav class="site-menu">
+    <!--Primary Menu-->
+    <section class="default-border">
+        <!--Primary Menu-->
+        <section class="active-course">
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="IINLC"/>
+            </a>
+
+            <h1 class="current-course">
+                <a>
+                    <span>HCTP June 2014</span>
+                    <i class="fa fa-caret-right drop-down-trigger"></i>
+                </a>
+            </h1>
+        </section>
+        <!--End Primary Menu-->
+
+
+        <!--Auxiliary  Menu-->
+        <aside class="aux-menu">
+            <ul>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i></a></li>
+                <li><a href="#"><i class="fa fa-bell"></i></a></li>
+                <li><a href="#"><i class="fa fa-life-saver"></i></a></li>
+                <li><a href="#"><i class="fa fa-search"></i></a></li>
+                <li><a href="#">Salman Munawar</a></li>
+            </ul>
+        </aside>
+        <!--Auxiliary  Menu-->
+
+
+        <!--Course Menu-->
+        <section class="course-menu">
+            <ul>
+                <li><a href="#">Module</a></li>
+                <li><a href="#">Health Histories</a></li>
+                <li><a href="#">Coaching Circles</a></li>
+                <li><a href="#">Business ToolKit</a></li>
+                <li><a href="#">Documents</a></li>
+                <li><a href="#">Libraries</a></li>
+                <li><a href="#">Connect</a></li>
+            </ul>
+        </section>
+        <!--End Course Menu-->
+
+    </section>
+    <!--End Primary Menu-->
+
+
+    <!--Secondary Menu-->
+    <section class="secondary-menu default-border">
+        <ul>
+            <li><a href="#">Launch a Book</a></li>
+            <li><a href="#">Immersion</a></li>
+            <li><a href="#">Alumi Refresher</a></li>
+        </ul>
+    </section>
+    <!--End Secondary Menu-->
+
+</nav>
+<!--End Main Nav-->
+
+
+<script>
+    (function () {
+
+        "use strict";
+
+        var trigger = document.querySelector(".current-course"),
+                secondaryMenu = document.querySelector(".secondary-menu"),
+                arrow = document.querySelector(".drop-down-trigger");
+
+        trigger.addEventListener("click", function () {
+            secondaryMenu.classList.toggle("active");
+            arrow.classList.toggle("fa-caret-right");
+            arrow.classList.toggle("fa-caret-down");
+        }, false);
+
+    }());
+</script>
+</body>
+</html>
