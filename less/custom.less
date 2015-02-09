@@ -166,13 +166,207 @@ ul, ol {
     top: 4em;
     visibility: visible;
   }
-
+  ul {
+    padding: 1em 0;
+  }
   li {
     display: block;
     line-height: 2em;
     border-left: .5em solid transparent;
     transition: all .5s;
-    padding: .5em 0;
+
+
+    &:hover {
+      border-left: .5em solid #2e8a86;
+      background: #d3dce3;
+    }//end hover
+  }//end a
+
+  a {
+    padding-left: 5.5em;
+    display: block;
+  }
+
+}//end secondary menu
+* {
+  box-shadow: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+a {
+  color: #2e8a86;
+  text-decoration: none;
+  transition: color .5s;
+  &:hover {
+    color: darken(#2e8a86, 10%);
+  }
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.default-border {
+  border: 1px solid #ddd;
+}
+//end default
+
+
+
+.site-menu {
+  display: block;
+  position: relative;
+  width: 98%;
+  margin: 1% auto;
+  height: 8em;
+  max-width: 1140px;
+
+}//end site menu
+
+
+
+.active-course, .aux-menu {
+  float: left;
+  width: 50%;
+  height: 4em;
+}
+
+
+
+//Active course
+.active-course {
+  line-height: 4em;
+  cursor: pointer;
+}
+
+//Logo
+.logo {
+  width: 4em;
+  height: 4em;
+  display: inline-block;
+  float: left;
+  line-height: 4em;
+  margin: 0 1em;
+  overflow: hidden;
+  position: relative;
+  img {
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: 70%;
+  }
+}
+//end logo
+
+.current-course {
+  border-right: 1px solid #ddd;
+  display: inline-block;
+  span {
+    font-size: 1.25em;
+  }
+  i {
+    text-align: center;
+  }
+}
+
+.drop-down-trigger {
+  display: inline-block;
+  padding: 0 1em;
+  font-size: 1.5em;
+  width: 3em
+
+}//end trigger
+//End active course
+
+
+
+//Auxiliary Menu
+.aux-menu {
+  line-height: 4em;
+  text-align: right;
+
+  a {
+    padding: 0 1em;
+    display: block;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+}
+//End Auxiliary Menu
+
+
+
+
+//Course Menu
+.course-menu {
+  display: block;
+  background: #d3dce3;
+  line-height: 4em;
+  clear: both;
+  overflow: hidden;
+
+  li {
+    float: left;
+  }
+
+  a {
+    display: inline-block;
+    font-weight: 600;
+    padding: 0 1em;
+    transition: all .5s;
+
+    &:hover {
+      color: #fff;
+      background: #2e8a86;
+    }//end a hover
+
+  }//end a
+
+}//end course menu
+
+
+
+//Secondary Menu
+.secondary-menu {
+  position: absolute;
+  left: 0;
+  top: 8em;
+  opacity: 0;
+  width: 100%;
+  background: #fff;
+  transition: all .25s;
+  overflow: hidden;
+  visibility: hidden;
+
+  &.active {
+    opacity: 1;
+    top: 4em;
+    visibility: visible;
+  }
+
+  ul {
+    padding: 1em 0;
+  }
+
+  li {
+    display: block;
+    line-height: 2.5em;
+    border-left: .5em solid transparent;
+    transition: all .5s;
+
 
     &:hover {
       border-left: .5em solid #2e8a86;
