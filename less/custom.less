@@ -1,3 +1,6 @@
+@medium-screens: 65em;
+@small-screens: 45em;
+
 * {
   box-shadow: none;
   outline: none;
@@ -185,21 +188,33 @@ ul, ol {
 
   li {
     display: block;
-    line-height: 2.5em;
-    border-left: .5em solid transparent;
-    transition: all .5s;
 
-
-    &:hover {
-      border-left: .5em solid #2e8a86;
-      background: #d3dce3;
-    }//end hover
-  }//end a
+    ul {
+      padding: 0 0 0 2em;
+      margin: 0;
+      a {
+        font-weight: 400;
+      }//end a
+    }//end ul
+  }//end li
 
   a {
-    padding-left: 5.5em;
+    line-height: 2.5em;
+    transition: all .5s;
+    padding-left: 6em;
     display: block;
-  }
+    font-weight: 600;
+  }//end a
+
+
+
+  @media (max-width: @medium-screens) {
+
+    a {
+      padding-left: 1em;
+    }
+
+  }//end small screens
 
 }//end secondary menu
 
@@ -219,5 +234,32 @@ ul, ol {
   text-align: left;
   display: inline-block;
   font-weight: 600;
+  min-width: 8em;
+
 }
 //end tooltip
+
+
+.hide {
+  @media (max-width: @medium-screens) {
+    display: none !important;
+  }
+}
+
+.show {
+  display: none !important;
+  @media (max-width: @medium-screens) {
+    display: block !important;
+  }
+}
+
+.clear-fix {
+  &:before, &:after {
+    display: block;
+    width: 100%;
+    content: '';
+    height: 0;
+    clear: both;
+    position: relative;
+  }
+}

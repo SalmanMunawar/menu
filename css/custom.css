@@ -135,17 +135,25 @@ ol {
 }
 .secondary-menu li {
   display: block;
-  line-height: 2.5em;
-  border-left: .5em solid transparent;
-  transition: all .5s;
 }
-.secondary-menu li:hover {
-  border-left: .5em solid #2e8a86;
-  background: #d3dce3;
+.secondary-menu li ul {
+  padding: 0 0 0 2em;
+  margin: 0;
+}
+.secondary-menu li ul a {
+  font-weight: 400;
 }
 .secondary-menu a {
-  padding-left: 5.5em;
+  line-height: 2.5em;
+  transition: all .5s;
+  padding-left: 6em;
   display: block;
+  font-weight: 600;
+}
+@media (max-width: 65em) {
+  .secondary-menu a {
+    padding-left: 1em;
+  }
 }
 .tooltip {
   position: absolute;
@@ -160,4 +168,27 @@ ol {
   text-align: left;
   display: inline-block;
   font-weight: 600;
+  min-width: 8em;
+}
+@media (max-width: 65em) {
+  .hide {
+    display: none !important;
+  }
+}
+.show {
+  display: none !important;
+}
+@media (max-width: 65em) {
+  .show {
+    display: block !important;
+  }
+}
+.clear-fix:before,
+.clear-fix:after {
+  display: block;
+  width: 100%;
+  content: '';
+  height: 0;
+  clear: both;
+  position: relative;
 }
